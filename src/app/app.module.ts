@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ConsignmentComponent } from './consignment/consignment.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidenavComponent,
+    ConsignmentComponent
   ],
   imports: [
     BrowserModule,

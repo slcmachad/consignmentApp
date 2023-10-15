@@ -1,0 +1,13 @@
+.logoheader {
+  background-color: rgb(4, 28, 32);
+  height: 80px;
+}
+
+.headerContent {
+  color: white;
+  margin: auto;
+  font-size: 40px;
+  display: table;
+  font-family: Georgia;
+  padding: 10px 0 0;
+}
