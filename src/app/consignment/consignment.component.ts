@@ -16,6 +16,8 @@ export class ConsignmentComponent{
   ngOnInit(){
     this.consignmentService.getConsignment().subscribe(data => {
       this.consignments = data;
+      console.log(this.consignments);
+
     })
   }
 

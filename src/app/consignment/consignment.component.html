@@ -7,4 +7,12 @@
       <th>ConsignmentStatus</th>
     </tr>
   </thead>
+  <tbody>
+    <tr *ngFor="let consignm of consignments">
+      <td>{{ consignm.consignmentId }}</td>
+      <td>{{ consignm.consignmentCategory }}</td>
+      <td>{{ consignm.deliveryPartner }}</td>
+      <td>{{ consignm.consignmentStatus }}</td>
+    </tr>
+  </tbody>
 </table>
