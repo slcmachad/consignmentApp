@@ -10,7 +10,7 @@ export class ConsignmentService {
 
   constructor(private http: HttpClient) { }
 
-  public getConsignment(): Observable<ConsignmentModel>{
-    return this.http.get<ConsignmentModel>("http://localhost:8080/consignment");
+  public getConsignment(): Observable<ConsignmentModel[]>{
+    return this.http.get<ConsignmentModel[]>("http://localhost:8080/consignments");
   }
 }
