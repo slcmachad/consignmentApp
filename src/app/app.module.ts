@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConsignmentComponent } from './consignment/consignment.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
-    ConsignmentComponent
+    ConsignmentComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
