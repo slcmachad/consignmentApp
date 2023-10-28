@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ConsignmentModel } from './ConsignmentMode';
@@ -11,6 +11,9 @@ export class ConsignmentService {
   constructor(private http: HttpClient) { }
 
   public getConsignment(): Observable<ConsignmentModel[]>{
-    return this.http.get<ConsignmentModel[]>("http://localhost:8080/consignments");
+    let token = localStorage.getItem("jwt");
+
+    let headers = new HttpHeaders().set('Authorization', 'Bearer ' + token);
+    return this.http.get<ConsignmentModel[]>("http://localhost:8080/consignments",{headers});
   }
 }

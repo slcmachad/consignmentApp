@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ConsignmentService } from '../consignment.service';
 import { ConsignmentModel } from '../ConsignmentMode';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consignment',
@@ -11,13 +12,15 @@ export class ConsignmentComponent{
 
   consignments: ConsignmentModel[] = [];
 
-  constructor(private consignmentService: ConsignmentService){}
+  constructor(private consignmentService: ConsignmentService, private router: Router){}
 
   ngOnInit(){
     this.consignmentService.getConsignment().subscribe(data => {
-      this.consignments = data;
-      console.log(this.consignments);
 
+      this.consignments = data;
+
+    }, err => {
+      this.router.navigate(['login']);
     })
   }
 

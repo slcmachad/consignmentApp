@@ -1,7 +1,10 @@
 <div class="logoheader">
     <span class="headerContent">Controle de produtos(Controle de estoque)</span>
+    <span class="headerContent1"><button class="btn btn-outline-light" (click)="logout()">Logout</button></span>
 </div>
-<app-sidenav></app-sidenav>
+<div *ngIf="isLoggedOn">
+  <app-sidenav></app-sidenav>
+</div>
 <div class="routerOutput">
   <router-outlet></router-outlet>
 </div>
